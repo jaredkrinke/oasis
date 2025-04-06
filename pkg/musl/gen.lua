@@ -15,7 +15,6 @@ set('cflags_c99fse', {
 	'-Wa,--noexecstack',
 })
 set('cflags_nossp', '-fno-stack-protector')
-set('cflags_memops', '-fno-tree-loop-distribute-patterns')
 cflags{
 	'$cflags_auto',
 	'$cflags_c99fse',
@@ -36,8 +35,7 @@ set('ldflags', {
 	'-Wl,--gc-sections',
 	'-Wl,--hash-style=both',
 	'-Wl,--no-undefined',
-	'-Wl,--exclude-libs=ALL',
-	'-Wl,--dynamic-list=$srcdir/dynamic.list',
+	'-nostdlib',
 })
 
 local basefiles = load('base.lua')
