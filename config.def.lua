@@ -26,6 +26,11 @@ return {
 
 	-- target toolchain and flags
 	target={
+		-- Use Zig toolchain, except for "as" (which probably only works from x86_64 Linux host)
+		ar='zig ar',
+		as='as',
+		cc='zig cc -target x86_64-linux-musl',
+		ld='zig ld',
 		platform='x86_64-linux-musl',
 		cflags='-Os -fPIE -pipe -Werror=implicit-function-declaration',
 		ldflags='-s -static-pie',
