@@ -6,7 +6,7 @@ cflags{
 	'-I $srcdir/src/linux/generic',
 	'-I $srcdir/src',
 	'-I $outdir',
-	'-isystem $builddir/pkg/linux-headers/include',
+	'-I $builddir/pkg/linux-headers/include',
 }
 
 build('cat', '$outdir/config.h', {

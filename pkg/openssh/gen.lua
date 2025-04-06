@@ -10,11 +10,11 @@ cflags{
 	archflags[arch] or '-D SANDBOX_RLIMIT=1',
 	'-I $outdir',
 	'-I $srcdir',
-	'-isystem $basedir/pkg/openbsd/include',
-	'-isystem $builddir/pkg/bearssl/include',
-	'-isystem $builddir/pkg/libfido2/include',
-	'-isystem $builddir/pkg/linux-headers/include',
-	'-isystem $builddir/pkg/zlib/include',
+	'-I $basedir/pkg/openbsd/include',
+	'-I $builddir/pkg/bearssl/include',
+	'-I $builddir/pkg/libfido2/include',
+	'-I $builddir/pkg/linux-headers/include',
+	'-I $builddir/pkg/zlib/include',
 	'-idirafter $srcdir/openbsd-compat',
 }
 
